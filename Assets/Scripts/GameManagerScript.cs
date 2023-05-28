@@ -30,9 +30,18 @@ public class GameManagerScript : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
+    //  
+    public void OnSnow()
+    {
+        PlayerScript player = GameObject.FindObjectOfType<PlayerScript>();
+        player.OnSnow();
+
+    }
+
     // ÉSÅ[Éã
     public void OnGoal()
     {
-        
+        PlayerScript player = GameObject.FindObjectOfType<PlayerScript>();
+
     }
 }
