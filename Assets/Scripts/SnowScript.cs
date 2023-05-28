@@ -26,7 +26,7 @@ public class SnowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (snowAmount >= 0)
+        if (snowAmount <= 0)
         {
             Destroy(gameObject, 0.2f);
         }
