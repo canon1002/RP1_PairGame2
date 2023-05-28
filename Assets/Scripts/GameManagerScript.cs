@@ -18,10 +18,10 @@ public class GameManagerScript : MonoBehaviour
     }
 
     // リスタート
-    private IEnumerator Restart()
+    public void SceneReset()
     {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        string activeSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(activeSceneName);
     }
 
     // シーン切り替え
