@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SnowScript : MonoBehaviour
 {
-    //
+    //•Ï”
+    public float snowAmount = 100;//á—Ê
+    public float decrease = 4;//á‚ªŒ¸‚é—Ê
     private void OnTriggerEnter2D(Collider2D m_collision)
     {
         if (m_collision.gameObject.CompareTag("Player"))
         {
             GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
             gamaManagerScript.OnSnow();
+            snowAmount -= decrease;
         }
     }
 
@@ -23,7 +26,10 @@ public class SnowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (snowAmount >= 0)
+        {
+            Destroy(gameObject, 0.2f);
+        }
     }
 
 
