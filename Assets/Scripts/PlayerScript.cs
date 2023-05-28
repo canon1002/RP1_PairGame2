@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     public CircleCollider2D m_CircleCollider;
     public bool m_bIsMove;
 
+    private float m_fAxisHorizontal;
+    public float m_fHorizontalSpeed = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +25,27 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        m_fAxisHorizontal = Input.GetAxisRaw("Horizontal");
+
         // ˆÚ“®‚ÌƒL[“ü—Í
         if (m_playerController.Player.Move.triggered)
         {
             m_bIsMove = true;
+
+            
+
         }
         else
         {
             m_bIsMove = false;
         }
 
+        // ˆÚ“®ˆ—
+        m_rigidbody.velocity = new Vector3(
+        m_fAxisHorizontal * m_fHorizontalSpeed,
+        m_rigidbody.velocity.y
+        );
 
     }
 
