@@ -17,8 +17,11 @@ public class PlayerScript : MonoBehaviour
     private float m_fAxisHorizontal;
     public float m_fHorizontalSpeed = 5f;
 
-    // 移動制限
+    // 入力制限
     public bool m_bIsControll;
+
+    // 雪に触れた際のサイズ増加値
+    public float m_fonSnowUpSize = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +68,12 @@ public class PlayerScript : MonoBehaviour
             m_rigidbody.velocity = new Vector3(
                 m_fAxisHorizontal * m_fHorizontalSpeed,
                 m_rigidbody.velocity.y
-        );
+                );
+        }
+        else
+        {
+            // 移動処理
+            m_rigidbody.velocity = Vector3.zero;
         }
 
     }
@@ -73,7 +81,7 @@ public class PlayerScript : MonoBehaviour
     // 雪の上を歩行
     public void OnSnow()
     {
-        transform.localScale += new Vector3(1, 1, 0);
+        transform.localScale += new Vector3(m_fonSnowUpSize, m_fonSnowUpSize, 0);
     }
 
     // ゴール
