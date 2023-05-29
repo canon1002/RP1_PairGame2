@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1848940805423020527, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
+      propertyPath: decrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848940805423020527, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
+      propertyPath: snowAmount
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6154068098301981818, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -140,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_LocalScale.x
@@ -493,7 +501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2568971958248902626, guid: 23fa931f457fcb644890e6d73d81d0fd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2568971958248902626, guid: 23fa931f457fcb644890e6d73d81d0fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -684,7 +692,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &840526643
 GameObject:
@@ -951,7 +959,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ed793b4c22f3c7c4787f345d20123249, type: 3}
     - target: {fileID: 2604793085985335058, guid: 32735a66f2fe3164a9f01a542ffec539, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2604793085985335058, guid: 32735a66f2fe3164a9f01a542ffec539, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1313,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163715602390709241, guid: 1a2680bb77832254da67f47c949b65a0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2163715602390709241, guid: 1a2680bb77832254da67f47c949b65a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1358,6 +1366,10 @@ PrefabInstance:
     - target: {fileID: 3328830464849609841, guid: 1a2680bb77832254da67f47c949b65a0, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328830464849609841, guid: 1a2680bb77832254da67f47c949b65a0, type: 3}
+      propertyPath: m_fonSnowUpSize
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4725418234237194888, guid: 1a2680bb77832254da67f47c949b65a0, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode

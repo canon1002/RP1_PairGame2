@@ -6,7 +6,7 @@ public class GoalScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D m_collision)
     {
-        if (m_collision.gameObject.CompareTag("Player"))
+        if (m_collision.gameObject.CompareTag("Head"))
         {
             GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
             gamaManagerScript.OnGoal();

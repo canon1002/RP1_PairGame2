@@ -231,3 +231,5 @@ MonoBehaviour:
   m_CircleCollider: {fileID: 8895669447444584405}
   m_bIsMove: 0
   m_fHorizontalSpeed: 5
+  m_bIsControll: 0
+  m_fonSnowUpSize: 0.3
