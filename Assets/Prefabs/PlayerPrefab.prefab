@@ -130,19 +130,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3328830464849609841}
-        m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 20c25a5b-d02a-4c59-94dc-dd65c9d0fce7
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -193,6 +181,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 99b1c235-f751-4580-8ab4-b7b368aeb36c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e5b9cdda-f915-4544-879f-ca9ccae6dbea
+    m_ActionName: Player/MoveLeft
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e352bb9e-255d-49f9-bacd-f25f850d874a
+    m_ActionName: Player/MoveRight
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -234,4 +230,4 @@ MonoBehaviour:
   m_rigidbody: {fileID: -5810441060457768029}
   m_CircleCollider: {fileID: 8895669447444584405}
   m_bIsMove: 0
-  m_fMoveVelocity: 0
+  m_fHorizontalSpeed: 5
