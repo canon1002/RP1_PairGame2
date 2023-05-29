@@ -5,15 +5,19 @@ using UnityEngine;
 public class SnowScript : MonoBehaviour
 {
     //ïœêî
-    public float snowAmount = 100;//ê·ó 
+    public float snowAmount = 8;//ê·ó 
     public float decrease = 4;//ê·Ç™å∏ÇÈó 
+    bool isTrue = false;
+
     private void OnTriggerEnter2D(Collider2D m_collision)
     {
         if (m_collision.gameObject.CompareTag("Player"))
         {
-            GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
-            gamaManagerScript.OnSnow();
-            snowAmount -= decrease;
+
+            //Ç±ÇÍÇÁÇ™ÉGÉâÅ[Ç…Ç»ÇÈ
+            //GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
+            //gamaManagerScript.OnSnow();
+            isTrue = true;
         }
     }
 
@@ -26,11 +30,16 @@ public class SnowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isTrue)
+        {
+            snowAmount -= decrease;
+        }
         if (snowAmount <= 0)
         {
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject);
         }
     }
+
 
 
 
