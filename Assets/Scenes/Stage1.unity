@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6154068098301981818, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6436171138994372397, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_Name
       value: SnowPrefab
@@ -140,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -152,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.65
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 8525904621358702709, guid: b8231b8b7a00e634c8e204f6867100f9, type: 3}
       propertyPath: m_LocalPosition.z
