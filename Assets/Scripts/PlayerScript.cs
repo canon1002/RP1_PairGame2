@@ -17,12 +17,16 @@ public class PlayerScript : MonoBehaviour
     private float m_fAxisHorizontal;
     public float m_fHorizontalSpeed = 5f;
 
+    // à⁄ìÆêßå¿
+    public bool m_bIsControll;
+
     // Start is called before the first frame update
     void Start()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_playerController = new PlayerController();
         m_playerController.Enable();
+        m_bIsControll = true;
     }
 
     // Update is called once per frame
@@ -30,33 +34,39 @@ public class PlayerScript : MonoBehaviour
     {
         m_fAxisHorizontal = Input.GetAxisRaw("Horizontal");
 
-        if (0f < m_fAxisHorizontal)
+        if (m_bIsControll)
         {
-            //GetComponent<Animator>().Play("MoveRight");
-            //transform.localScale = new Vector2(1f, 2f);
-            m_bIsMove = true;
-        }
-        else if (m_fAxisHorizontal < 0f)
-        {
-            //GetComponent<Animator>().Play("MoveLeft");
-            //transform.localScale = new Vector2(-1f, 2f);
-            m_bIsMove = true;
-        }
-        else
-        {
-            m_bIsMove = false;
+
+            if (0f < m_fAxisHorizontal)
+            {
+                //GetComponent<Animator>().Play("MoveRight");
+                //transform.localScale = new Vector2(1f, 2f);
+                m_bIsMove = true;
+            }
+            else if (m_fAxisHorizontal < 0f)
+            {
+                //GetComponent<Animator>().Play("MoveLeft");
+                //transform.localScale = new Vector2(-1f, 2f);
+                m_bIsMove = true;
+            }
+            else
+            {
+                m_bIsMove = false;
+            }
         }
 
     }
 
     private void FixedUpdate()
     {
-
-        // à⁄ìÆèàóù
-        m_rigidbody.velocity = new Vector3(
-        m_fAxisHorizontal * m_fHorizontalSpeed,
-        m_rigidbody.velocity.y
+        if (m_bIsControll)
+        {
+            // à⁄ìÆèàóù
+            m_rigidbody.velocity = new Vector3(
+                m_fAxisHorizontal * m_fHorizontalSpeed,
+                m_rigidbody.velocity.y
         );
+        }
 
     }
 
@@ -69,7 +79,8 @@ public class PlayerScript : MonoBehaviour
     // ÉSÅ[Éã
     public void OnGoal()
     {
-
+        m_playerController.Disable();
+        m_bIsControll = false;
     }
 
 }

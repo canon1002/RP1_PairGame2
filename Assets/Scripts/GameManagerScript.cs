@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public GameObject GoalPanelObject;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+       GoalPanelObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,7 +43,8 @@ public class GameManagerScript : MonoBehaviour
     // ÉSÅ[Éã
     public void OnGoal()
     {
+        GoalPanelObject.SetActive(true);
         PlayerScript player = GameObject.FindObjectOfType<PlayerScript>();
-
+        player.OnGoal();
     }
 }
