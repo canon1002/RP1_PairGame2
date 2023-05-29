@@ -5,7 +5,7 @@ using UnityEngine;
 public class SnowScript : MonoBehaviour
 {
     //•Ï”
-    public float snowAmount = 8;//á—Ê
+    public float snowAmount = 16;//á—Ê
     public float decrease = 4;//á‚ªŒ¸‚é—Ê
     bool isTrue = false;
 

@@ -7,13 +7,14 @@ public class PlayerHeadScript : MonoBehaviour
 
     public GameObject Player;
 
-    private void OnTriggerEnter2D(Collider2D m_collision)
+    private void OnTriggerEnter2D(Collider2D m_collision)//“ª‚Æ‘Ì‚Ì“–‚½‚è”»’è
     {
         if (m_collision.gameObject.CompareTag("Player"))
         {
             transform.SetParent(Player.transform);
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
