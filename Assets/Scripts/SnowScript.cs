@@ -26,17 +26,23 @@ public class SnowScript : MonoBehaviour
                 // 雪上　かつ　プレイヤーが雪纏できる
                 if (m_bIsOnSnow && m_bIsPlayerSnowSet)
                 {
-                    GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
-                    gamaManagerScript.OnSnow();
+                    // プレイヤーの頭がくっついていないときだけ大きくなる
+                    PlayerScript player = GameObject.FindObjectOfType<PlayerScript>();
+                    if (player.GetIsStickHead() == false)
+                    {
 
-                    snow1 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
-                    snow2 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
-                    snow3 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
-                    snow4 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
-                    snow5 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
-                    snow6 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                        GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
+                        gamaManagerScript.OnSnow();
 
-                    snowAmount -= decrease;
+                        snow1 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                        snow2 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                        snow3 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                        snow4 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                        snow5 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                        snow6 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+
+                        snowAmount -= decrease;
+                    }
                 }
 
                 // プレイヤーの雪纏いを不可に変更

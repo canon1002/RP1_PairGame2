@@ -23,6 +23,9 @@ public class PlayerScript : MonoBehaviour
     // 雪に触れた際のサイズ増加値
     public float m_fonSnowUpSize = 0.1f;
 
+    // 頭がくっついているかどうか
+    private bool m_bIsStickHead = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,7 @@ public class PlayerScript : MonoBehaviour
         m_playerController = new PlayerController();
         m_playerController.Enable();
         m_bIsControll = true;
+        m_bIsStickHead = false;
     }
 
     // Update is called once per frame
@@ -76,6 +80,16 @@ public class PlayerScript : MonoBehaviour
             m_rigidbody.velocity = Vector3.zero;
         }
 
+    }
+
+    public void StickHead()
+    {
+        m_bIsStickHead = true;
+    }
+
+    public bool GetIsStickHead()
+    {
+        return m_bIsStickHead;
     }
 
     // 雪の上を歩行
