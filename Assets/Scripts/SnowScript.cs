@@ -10,9 +10,12 @@ public class SnowScript : MonoBehaviour
     public bool m_bIsPlayerSnowSet = true;
     public bool m_bIsOnSnow = false;
 
+    public GameObject snowPrefab;
+    GameObject snow1, snow2, snow3, snow4, snow5, snow6;
+
     private void OnTriggerEnter2D(Collider2D m_collision)
     {
-       
+
         if (m_collision.gameObject.CompareTag("Player"))
         {
             if (m_bIsPlayerSnowSet == true)
@@ -25,6 +28,14 @@ public class SnowScript : MonoBehaviour
                 {
                     GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
                     gamaManagerScript.OnSnow();
+
+                    snow1 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                    snow2 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                    snow3 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                    snow4 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                    snow5 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+                    snow6 = Instantiate(snowPrefab, new Vector3(m_collision.transform.position.x, m_collision.transform.position.y - 0.5f, 0), Quaternion.identity);
+
                     snowAmount -= decrease;
                 }
 
@@ -51,13 +62,13 @@ public class SnowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (snowAmount <= 0)
         {
             Destroy(gameObject);
