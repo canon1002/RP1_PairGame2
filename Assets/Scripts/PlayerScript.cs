@@ -60,6 +60,13 @@ public class PlayerScript : MonoBehaviour
             {
                 m_bIsMove = false;
             }
+
+            if (Input.GetKeyDown((KeyCode)Key.R))
+            {
+                GameManagerScript gamaManagerScript = GameObject.FindObjectOfType<GameManagerScript>();
+                gamaManagerScript.SceneReset();
+            }
+
         }
 
     }
