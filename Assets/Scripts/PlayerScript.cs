@@ -49,12 +49,21 @@ public class PlayerScript : MonoBehaviour
                 //GetComponent<Animator>().Play("MoveRight");
                 //transform.localScale = new Vector2(1f, 2f);
                 m_bIsMove = true;
+
+                if (!m_bIsStickHead)
+                {
+                    transform.Rotate(0f, 0f, -2f);
+                }
             }
             else if (m_fAxisHorizontal < 0f)
             {
                 //GetComponent<Animator>().Play("MoveLeft");
                 //transform.localScale = new Vector2(-1f, 2f);
                 m_bIsMove = true;
+                if (!m_bIsStickHead)
+                {
+                    transform.Rotate(0f, 0f, 2f);
+                }
             }
             else
             {
