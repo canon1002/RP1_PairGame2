@@ -52,7 +52,7 @@ public class PlayerScript : MonoBehaviour
 
                 if (!m_bIsStickHead)
                 {
-                    transform.Rotate(0f, 0f, -3f);
+                    transform.Rotate(0f, 0f, -12f);
                 }
             }
             else if (m_fAxisHorizontal < 0f)
@@ -62,7 +62,7 @@ public class PlayerScript : MonoBehaviour
                 m_bIsMove = true;
                 if (!m_bIsStickHead)
                 {
-                    transform.Rotate(0f, 0f, 3f);
+                    transform.Rotate(0f, 0f, 12f);
                 }
             }
             else
