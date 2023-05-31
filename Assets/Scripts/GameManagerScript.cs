@@ -10,7 +10,10 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       GoalPanelObject.SetActive(false);
+        // FPSÇê›íË(1ïb = 60fps)
+        Application.targetFrameRate = 60;
+
+        GoalPanelObject.SetActive(false);
     }
 
     // Update is called once per frame
