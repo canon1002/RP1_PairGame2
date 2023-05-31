@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9bf65338ae234364e9ecacad7b8fe636, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52486837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.61, y: -2.66, z: 0}
+  m_LocalPosition: {x: 1.61, y: -2.67, z: 0}
   m_LocalScale: {x: 2.7, y: 2.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &746721023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1120293653}
         m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
         m_MethodName: SceneReset
         m_Mode: 1
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d4c8445310d4a4db9f2eb0b5afe639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoalPanelObject: {fileID: 0}
+  GoalPanelObject: {fileID: 746721022}
 --- !u!4 &1120293654
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,7 +1098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2568971958248902626, guid: 23fa931f457fcb644890e6d73d81d0fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2568971958248902626, guid: 23fa931f457fcb644890e6d73d81d0fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1138,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8787832589285672797, guid: 23fa931f457fcb644890e6d73d81d0fd, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8953251816807543540, guid: 23fa931f457fcb644890e6d73d81d0fd, type: 3}
       propertyPath: m_Size.x
