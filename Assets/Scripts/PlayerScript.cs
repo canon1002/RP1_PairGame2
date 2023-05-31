@@ -77,7 +77,10 @@ public class PlayerScript : MonoBehaviour
         else
         {
             // ˆÚ“®ˆ—
-            m_rigidbody.velocity = Vector3.zero;
+            m_rigidbody.velocity = new Vector3(
+                0,
+                m_rigidbody.velocity.y
+                );
         }
 
     }
